@@ -1,3 +1,9 @@
+<?php
+    include 'login.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +11,10 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+ 
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Welcome</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -45,7 +49,7 @@
                             <input class="input--style-3" type="password" placeholder="Password" name="password">
                         </div>
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                            <button class="btn btn--pill btn--green" type="submit" id="login" name="login">Submit</button>
                         </div>
                         <br><br>
                         <p><a href="register.php" style="text-decoration: none;color: white;">I am new here!</a></p>

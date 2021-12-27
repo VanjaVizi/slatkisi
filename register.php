@@ -1,3 +1,38 @@
+<?php
+    	require 'config.php';
+       
+    
+     
+        if(isset($_POST["register"])){ 
+            $email = $_POST["emailR"];
+            $password = $_POST["passwordR"];
+            $name= $_POST["nameR"];
+            $phone= $_POST["phoneR"];
+            $bday= $_POST["birthdayR"];
+
+           
+            
+         
+            $result= $conn->query("Insert into user(email,password,name,phone,birthdate) values('$email','$password','$name',' $phone','$bday')");
+                
+            
+            if ($result){
+                echo '<script>alert("Uspesno")</script>';
+                 
+                 header('Location: index.php');
+                 
+            }else{
+                echo '<script>alert("Neuspesna registracija")</script>';
+            }
+        }
+    
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +40,10 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+ 
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Register</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -32,27 +65,27 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Registration Info</h2>
+                    <h2 class="title">Register</h2>
                     <form method="POST">
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                            <input class="input--style-3" type="text" placeholder="Name" name="nameR">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthdayR">
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
                          
                         <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="email">
+                            <input class="input--style-3" type="email" placeholder="Email" name="emailR">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                            <input class="input--style-3" type="text" placeholder="Phone" name="phoneR">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="Password" name="password">
+                            <input class="input--style-3" type="password" placeholder="Password" name="passwordR">
                         </div>
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                            <button class="btn btn--pill btn--green" type="submit" id="register" name="register" >Submit</button>
                         </div>
                         <br><br>
                         <p><a href="index.php" style="text-decoration: none;color: white;">I already have an account!</a></p>
