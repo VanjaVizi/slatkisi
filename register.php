@@ -32,15 +32,22 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Log in</h2>
+                    <h2 class="title">Registration Info</h2>
                     <form method="POST">
-                         
-                        
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                        </div>
                          
                         <div class="input-group">
                             <input class="input--style-3" type="email" placeholder="Email" name="email">
                         </div>
-                        
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                        </div>
                         <div class="input-group">
                             <input class="input--style-3" type="password" placeholder="Password" name="password">
                         </div>
@@ -48,7 +55,7 @@
                             <button class="btn btn--pill btn--green" type="submit">Submit</button>
                         </div>
                         <br><br>
-                        <p><a href="register.php" style="text-decoration: none;color: white;">I am new here!</a></p>
+                        <p><a href="index.php" style="text-decoration: none;color: white;">I already have an account!</a></p>
                     </form>
                 </div>
             </div>
