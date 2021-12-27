@@ -1,0 +1,64 @@
+<?php
+
+    class Product{
+        private $id;
+        private $name;
+        private $description;
+        private $price;
+        private $image;
+        private $category;
+
+        public function __construct($id=null, $name=null, $description=null,   $category=null,$price=null,$image=null)
+        {
+            $this->id=$id;
+            $this->name=$name;
+            $this->description=$description; 
+            $this->category=$category;
+            $this->price=$price;
+            $this->image=$image;
+    
+        }
+
+
+        public static function addProduct($p, $conn){
+            $upit = "insert into product (name,description,image,price,category) values ('$p->naziv','$p->description','$p->image',$p->price,'$p->category')";
+            
+            return $conn->query($upit); 
+    
+        }
+    
+        public static function getAllProducts($conn){
+            $upit = " select * from product";
+           
+            return $conn->query($upit); 
+        }
+    
+        public static function getProduct($id,$conn){
+            $upit = " select * from product where id=$id";
+           
+            return $conn->query($upit); 
+        }
+    
+        public static function deleteProduct($id, $conn){
+            $upit = " delete from  product where id=$id";
+           
+            return $conn->query($upit); 
+        }
+    
+    
+        public static function updateProduct($p,$conn){
+    
+            $upit = "update komadodece set price=$p->price,name='$p->name',description='$p->description',image='$p->image',category=$p->category where id=$p->id ";
+    
+            return $conn->query($upit); 
+    
+        }
+
+
+
+
+    }
+
+
+
+?>
