@@ -21,13 +21,13 @@
       console.log(response);
 
         if (response === "Success") {
-            alert("Odeca dodata");
+            alert("Uspesno dodato");
             
-            location.reload(true);
+            
         }
         else {
        
-            console.log("Odeca nije dodata" + response);
+            console.log("Neuspesno" + response);
         }
     });
 
