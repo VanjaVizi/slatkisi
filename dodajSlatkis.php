@@ -74,12 +74,12 @@
                     <h2 class="title">Add new product</h2>
                     <form method="POST" id="addNewProduct">
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="nameC">
+                            <input class="input--style-3" type="text" placeholder="Name" name="nameC" required>
                         </div>
                         
                          
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Description" name="description">
+                            <input class="input--style-3" type="text" placeholder="Description" name="description" required>
                         </div>
                         
                         <div class="input-group">
@@ -100,10 +100,10 @@
 
 
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Price" name="price">
+                            <input class="input--style-3" type="text" placeholder="Price" name="price" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="file"  name="uploadfile">
+                            <input class="input--style-3" type="file"  name="uploadfile" required>
                         </div>
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit" id="register" name="register" >Submit</button>

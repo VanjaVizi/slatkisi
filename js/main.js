@@ -36,3 +36,26 @@
     });
 }); 
 
+
+
+
+function deleteProduct(deleteid){
+
+
+    request = $.ajax({  
+        url: 'handler/remove.php',  
+        type: 'post', 
+        data: {deleteid:deleteid},
+
+
+        success: function(data, status){
+            location.reload(true);
+            alert("Uspesno obrisano!");
+        }
+
+
+    });
+
+
+
+}

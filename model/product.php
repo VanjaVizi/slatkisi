@@ -28,7 +28,7 @@
         }
     
         public static function getAllProducts($conn){
-            $upit = " select * from product";
+            $upit = " select * from product p inner join category c on p.category=c.idCat";
            
             return $conn->query($upit); 
         }
