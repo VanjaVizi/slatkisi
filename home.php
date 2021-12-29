@@ -39,11 +39,13 @@
         </div>
     
     </nav>
-   
+ 
+   <div class="products">
     <div id="products" name="products">
-        <?php include "productCards.php"; ?>
-    </div>
-
+            <?php include "productCards.php"; ?>
+            
+        </div>
+    </div> 
 
 
 
