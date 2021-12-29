@@ -110,4 +110,22 @@ $('#EditProduct').submit(function () {
 }); 
 
 
+function sortirajPoCeni() {
+    var sortiraj = $("#cena").val();
+    console.log(sortiraj);
+ //   var kategorijesel = $("#kategorija").val();
+
+    $("#products").html("");
+    $.post("productCards.php", { cena: sortiraj }, function (data) {
+        $("#products").html(data);
+    });
+    $('html, body').animate({
+        scrollTop: $("#products").offset().top
+    }, 2000);
+
+   
+
+
+}
+
   

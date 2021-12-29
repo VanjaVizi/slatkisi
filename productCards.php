@@ -1,8 +1,19 @@
 <?php
     include 'config.php';
     include 'model/product.php';
-    $sviSlatkisi = Product::getAllProducts($conn);
-
+   
+    if (isset($_POST['cena'])) {
+    
+        $sortiraj = $_POST['cena'];
+        if($sortiraj=='ASC'){
+            $sviSlatkisi = Product::getAllProductsSortedByPriceASC($conn);
+        }else if($sortiraj=='DESC'){
+            $sviSlatkisi = Product::getAllProductsSortedByPriceDESC($conn);
+        }
+    }else{
+        $sviSlatkisi = Product::getAllProducts($conn);
+    }
+    
 
 ?>
 <!DOCTYPE html>
