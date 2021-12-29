@@ -27,7 +27,7 @@
 </head>
 <body style="background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);">
     <nav class="navbar navbar-custom"  >
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home.php">
             <img src="images/bombona.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Poslasticarnica <strong> <i>
                 Slatkisi
@@ -43,7 +43,7 @@
    <div class="products">
     <div id="products" name="products">
             <?php include "productCards.php"; ?>
-            
+
         </div>
     </div> 
 

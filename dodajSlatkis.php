@@ -106,7 +106,7 @@
                             <input class="input--style-3" type="file"  name="uploadfile" required>
                         </div>
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit" id="register" name="register" >Submit</button>
+                            <button class="btn btn--pill btn--green" type="submit"  >Submit</button>
                         </div>
                     </form>
                 </div>

@@ -13,23 +13,9 @@
         
         $result =  Product::getProduct($id,$conn);
         $row = $result->fetch_array();
-        
     }
    
-   // if (isset($_POST['azuriaj'])) { //ako submitujemo formu za izmenu
-            // $idigracke = $_POST['idigracke'];
-            // $naziv = $_POST['naziv'];
-            // $opis = $_POST['opis'];
-            // $cena = $_POST['cena'];
-            // $kategorijaa = $_POST['kategorijaa'];
-
-
-            //$sql = "UPDATE igracke SET naziv='" . $naziv . "',kategorija='" . $kategorijaa . "',opis='" . $opis . "',cena='" . $cena . "' WHERE id='" . $idigracke . "'";
-           // Broker::getBroker()->izvrsiUpit($sql);
-
-
-           // header('Location: home.php');
-    //}
+ 
 
     
 
@@ -64,7 +50,7 @@
              <div class="card-heading" style="background: url('images/pozadina2.jpeg') top left/cover no-repeat; display: table-cell; width: 50%;"></div>
              <div class="card-body">
                  <h2 class="title">Azuriraj proizvod</h2>
-                 <form method="POST" id="EditProduct">
+                 <form action="updateProduct.php" method="POST" id="EditProduct">
                      <div class="input-group">
                          <input class="input--style-3" type="text" value="<?php echo $row['name'] ?>" placeholder="Name" name="nameCE"   required>
                      </div>
@@ -76,7 +62,7 @@
                      
                      <div class="input-group">
                          <div class="rs-select2 js-select-simple select--no-search">
-                             <select name="categoryE">
+                             <select name="categoryE" id="categoryE">
                              <option disabled="disabled" selected="selected">Categories</option>
                              <?php
                           
@@ -88,6 +74,7 @@
                              </select>
                              <script>
                                  
+                                $('#categoryE').val('<?php echo $row['idCat']?>');
                              </script>
                              <div class="select-dropdown"></div>
                          </div>
@@ -100,9 +87,16 @@
                      <div class="input-group">
                          <input class="input--style-3" type="file"  name="uploadfileE">
                      </div>
-                     <div class="p-t-10">
-                         <button class="btn btn--pill btn--green" type="submit" id="azuriraj"   >Submit</button>
-                     </div>
+                     <input class="input--style-3" type="hidden"  name="hiddenSlika" value="<?php echo $row['image'] ?>">
+                     <input class="input--style-3" type="hidden"  name="hiddenID"  value="<?php echo $row['id'] ?>">
+                      
+                         <button class="btn btn--pill btn--green" type="submit" id="azuriraj"    >Submit</button>
+                           
+                                    
+                         
+                     
+                          
+                    
                  </form>
              </div>
          </div>

@@ -68,21 +68,22 @@
                     <h2 class="title">Register</h2>
                     <form method="POST">
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="nameR">
+                            <input class="input--style-3" type="text" placeholder="Name" name="nameR" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthdayR">
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthdayR"required>
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
                          
                         <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="emailR">
+                            <input class="input--style-3" type="email" placeholder="Email" name="emailR" id="emailR" onblur="proveri(document.getElementById('emailR').value)"   required>
+                        </div>
+                        <div  id="user" style="color:white">Da li je dobar email</div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Phone" name="phoneR"required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Phone" name="phoneR">
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="Password" name="passwordR">
+                            <input class="input--style-3" type="password" placeholder="Password" name="passwordR"required>
                         </div>
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit" id="register" name="register" >Submit</button>
@@ -104,6 +105,8 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
+    <script src="js/provera.js"></script>
+
 
 </body> 
 
