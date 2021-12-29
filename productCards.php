@@ -34,12 +34,13 @@
                
         ?>
             <div class="card">
-                <div class="card-header">
-                     <img src="<?php echo 'images/'.$row['image']?>" >   
+                <div class="card-header" style="padding:0">
+                     <img src="<?php echo 'images/'.$row['image']?>" style="height:300px;width: auto;" >   
                 </div>
                 <div class="card-body">
-                      <div class="tag tag-teal">   <?php echo $row['nameCat']?>   </div>  
-                    <h4>  <?php echo $row['name']?>  </h4>
+                    <div class="tag tag-teal">   <?php echo $row['nameCat']?>   </div>  
+                    <br>
+                    <h4 name = "naslovKartice">  <?php echo $row['name']?>  </h4>
                     <p>  <?php echo $row['description']?>  </p>  
                     <?php $novaCena =  $row['price']  ?>
                     <?php $staraCena =  $novaCena*1.1;  ?>

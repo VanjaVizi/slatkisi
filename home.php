@@ -52,13 +52,23 @@
  
    <div class="products">
        <br>
-       <label for="cena" style="margin-left:20%;font-size:16px">Sortiranje: </label>
-        <select name="cena" id="cena" onchange="sortirajPoCeni()" style="background-color:#fbc2eb;color:black;font-size:16px">
-                <option  >Price  </option>
-                <option value="ASC">Price ascending  </option>
-                <option value="DESC">Price  descending </option>
-        </select>
        
+
+       
+        <label for="cena" style="margin-left:20%;font-size:16px">Sortiranje: </label>
+            <select name="cena" id="cena" onchange="sortirajPoCeni()" style="background-color:#fbc2eb;color:black;font-size:16px">
+                    <option  >Price  </option>
+                    <option value="ASC">Price ascending  </option>
+                    <option value="DESC">Price  descending </option>
+            </select>
+        
+        <div class="input-group" style="float:right;padding-left:65%;padding-right:15%;"> 
+            
+                <input type="search" id="form1" class="form-control"  style="float:right" onkeyup="pretraga(document.getElementById('form1').value)" placeholder="Search by name..."/>
+                 
+            
+                <button type="button" class="btn btn-custom" style="background-color:#fbc2eb; color:black" ;><i class="fas fa-search"></i> </button>
+            </div>
         <div id="products" name="products">
                 <?php include "productCards.php"; ?>
 
