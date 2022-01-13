@@ -14,11 +14,7 @@
         $result =  Product::getProduct($id,$conn);
         $row = $result->fetch_array();
     }
-   
- 
-
     
-
 
 ?> 
 

@@ -24,11 +24,7 @@
             }else{
                 echo '<script>alert("Neuspesna registracija")</script>';
             }
-        }
-    
-
-
-
+        } 
 
 ?>
 
